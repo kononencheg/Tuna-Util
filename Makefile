@@ -4,8 +4,6 @@
 #	Variables
 #
 
-INSTALL_PREFIX=/usr
-
 JS_ROOT_DIR = ./
 JS_DEFAULT_OUT = bin/util.js
 JS_DEFAULT_ENV = browser

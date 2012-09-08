@@ -48,7 +48,7 @@ util.VERSION = '0.0.1';
  * @const
  * @type {boolean}
  */
-util.IS_IE = !!eval("'\v' == 'v'");
+util.IS_IE = false;
 
 
 /**
