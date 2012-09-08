@@ -7,7 +7,7 @@
 INSTALL_PREFIX=/usr
 
 JS_ROOT_DIR = ./
-JS_DEFAULT_OUT = bin/utils.js
+JS_DEFAULT_OUT = bin/util.js
 JS_DEFAULT_ENV = browser
 
 include build/js-variables.mk
