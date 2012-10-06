@@ -1,5 +1,5 @@
 /**
- * util FRAMEWORK
+ * TUNA FRAMEWORK
  *
  * Copyright (c) 2012, Sergey Kononenko
  * All rights reserved.
@@ -25,6 +25,198 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
+
+
+
+/**
+ * @namespace
+ */
+var util = {};
+
+
+/**
+ * Версия библиотеки.
+ *
+ * @const
+ * @type {string}
+ */
+util.VERSION = '';
+
+
+/**
+ * Является ли текущий браузер Internet Explorer'ом.
+ *
+ * @const
+ * @type {boolean}
+ */
+util.IS_IE = false;
+
+
+/**
+ * @namespace
+ */
+util.dom = {};
+
+
+/**
+ * Наследование типа.
+ *
+ * Передает прототип родительского класса дочернему классу без ссылки на
+ * него, сохраняя конструктор.
+ *
+ * @param {!Object} Class Класс который должен наследовать тип.
+ * @param {!Object} Parent Родительский класс.
+ */
+util.inherits = function(Class, Parent) {};
+
+
+/**
+ * Привязывание определенного контекста к функции или методу.
+ *
+ * @param {!function()} func Функция.
+ * @param {Object} context Контекст.
+ * @return {function()} Привязанная к контексту функция.
+ */
+util.bind = function(func, context) {};
+
+
+/**
+ * Отложенное выполнение функции.
+ *
+ * @param {function()} callback Функция.
+ */
+util.async = function(callback) {};
+
+
+/**
+ * Клонирование объекта.
+ *
+ * @param {*} object Объект.
+ * @return {*} Копия объекта.
+ */
+util.clone = function(object) {};
+
+
+/**
+ * @param {!Object} base Базовый объект.
+ * @param {!Object} target Объект для наложения на базовый.
+ */
+util.merge = function(base, target) {};
+
+
+/**
+ * @param {Object} first Объект для сравнения.
+ * @param {Object} second Другой объект для сравнения.
+ * @return {boolean} Результат сравнения.
+ */
+util.areEqual = function(first, second) {};
+
+
+/**
+ * Преобразование объекта с индесами в массив.
+ *
+ * @param {!Object} list Объект похожий на массив.
+ * @return {!Array} Массив.
+ */
+util.toArray = function(list) {};
+
+
+/**
+ * Клонирование массива.
+ *
+ * @param {!Array} array Массив.
+ * @return {!Array} Копия массива.
+ */
+util.cloneArray = function(array) {};
+
+
+/**
+ * Поиск индекса объекта в массиве.
+ *
+ * @param {*} element Объект поиска.
+ * @param {!Array} array Массив.
+ * @return {number} Индекс найденного элемента.
+ */
+util.indexOf = function(element, array) {};
+
+
+/**
+ * @param {Object} object Объект кодирования.
+ * @return {string} Кодированный в строку объект.
+ */
+util.encodeJsonData = function(object) {};
+
+
+/**
+ * @param {string} data Закодированный объект.
+ * @return {*} Раскодированный объект.
+ */
+util.decodeJsonData = function(data) {};
+
+
+/**
+ * Кодирование объекта в x-www-form-urlencoded форму.
+ *
+ * @param {!Object} object Объект кодирования.
+ * @return {string} Перекодированный в строку объект.
+ */
+util.encodeFormData = function(object) {};
+
+
+/**
+ * @param {string} data Закодированный объект.
+ * @return {*} Раскодированный объект.
+ */
+util.decodeFormData = function(data) {};
+
+
+/**
+ * @param {string} token Имя элементарного узла данных.
+ * @return {!Array.<string>} Массив строк пути к узлу.
+ */
+util.parseUrlPathToken = function(token) {};
+
+
+/**
+ * @constructor
+ * @param {!Object} data Исходные данные.
+ */
+util.SafeObject = function(data) {};
+
+
+/**
+ * @return {!Object} Исходные данные.
+ */
+util.SafeObject.prototype.getCore = function() {};
+
+
+/**
+ * @param {...(string|number)} var_keys Путь к значению.
+ * @return {string|number|boolean|Object} Данные.
+ */
+util.SafeObject.prototype.get = function(var_keys) {};
+
+
+/**
+ * @param {string|number|boolean|Object} value Данные.
+ * @param {...(string|number)} var_keys Путь к значению.
+ */
+util.SafeObject.prototype.set = function(value, var_keys) {};
+
+
+/**
+ * @param {!Array.<(string|number)>} path Путь к значению.
+ * @return {string|number|boolean|Object} Данные.
+ */
+util.SafeObject.prototype.getByPath = function(path) {};
+
+
+/**
+ * @param {string|number|boolean|Object} value Данные.
+ * @param {!Array.<(string|number)>} path Путь к значению.
+ */
+util.SafeObject.prototype.setByPath = function(value, path) {};
+
 
 
 /**
