@@ -89,6 +89,12 @@ util.async = function(callback) {};
 
 
 /**
+ * Ничего не выполняющая функция.
+ */
+util.nop = function() {};
+
+
+/**
  * Клонирование объекта.
  *
  * @param {*} object Объект.
@@ -168,6 +174,17 @@ util.encodeFormData = function(object) {};
  * @return {*} Раскодированный объект.
  */
 util.decodeFormData = function(data) {};
+
+
+/**
+ * Рекурсивное разбиение объекта н данные для кодирования в
+ * x-www-form-urlencoded.
+ *
+ * @param {!Object} object Объект кодирования.
+ * @param {!Array.<string>=} opt_path Путь к элементарной единице данных.
+ * @return {!Array.<string>} Массив элементарных данных составляющих объект.
+ */
+util.tokenizeUrlData = function(object, opt_path) {};
 
 
 /**
