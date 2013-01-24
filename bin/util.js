@@ -90,7 +90,9 @@ util.tokenizeUrlData = function(object, opt_path) {
       result = result.concat(util.tokenizeUrlData(object[key], newPath))
     }
   }else {
-    result = [opt_path.shift() + (opt_path.length > 0 ? "[" + opt_path.join("][") + "]=" : "=") + encodeURIComponent(String(object))]
+    if(object !== undefined) {
+      result = [opt_path.shift() + (opt_path.length > 0 ? "[" + opt_path.join("][") + "]=" : "=") + encodeURIComponent(String(object))]
+    }
   }
   return result
 };
