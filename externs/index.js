@@ -523,3 +523,22 @@ util.dom.getAttributesData = function(element, opt_prefix) {};
 util.dom.createFragment = function(html) {};
 
 
+/**
+ * @param {string} name Имя переменной.
+ * @param {string} value Значение.
+ * @param {number=} opt_time Время хранения.
+ */
+util.setCookie = function(name, value, opt_time) {};
+
+
+/**
+ * @param {string} name Имя переменной.
+ * @return {string} Значение переменной.
+ */
+util.getCookie = function(name) {};
+
+
+/**
+ * @param {string} name Имя переменной.
+ */
+util.removeCookie = function(name) {};
