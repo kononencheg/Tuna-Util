@@ -43,7 +43,7 @@ util.VERSION = '0.0.1';
  *
  * @type {boolean}
  */
-util.IS_IE = !!eval("'\v' == 'v'");
+util.IS_IE = false;
 
 /**
  * @namespace
