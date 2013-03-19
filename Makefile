@@ -42,7 +42,7 @@ install-dev:
 	mkdir -p $(DEV_INSTALL_PREFIX)/$(MODULE_NAME)/bin/;
 	mkdir -p $(DEV_INSTALL_PREFIX)/$(MODULE_NAME)/externs/;
 	cp package.json $(DEV_INSTALL_PREFIX)/$(MODULE_NAME)/;
-	cp bin/index.js $(DEV_INSTALL_PREFIX)/$(MODULE_NAME)/bin/;
+	cp bin/util.js $(DEV_INSTALL_PREFIX)/$(MODULE_NAME)/bin/;
 	cp externs/index.js $(DEV_INSTALL_PREFIX)/$(MODULE_NAME)/externs/;
 
 
@@ -50,7 +50,7 @@ install-deploy:
 	mkdir -p $(DEPLOY_INSTALL_PREFIX)/$(DEPLOY_RELEASE)/deps/$(MODULE_NAME)/bin/;
 	mkdir -p $(DEPLOY_INSTALL_PREFIX)/$(DEPLOY_RELEASE)/deps/$(MODULE_NAME)/externs/;
 	cp package.json $(DEPLOY_INSTALL_PREFIX)/$(DEPLOY_RELEASE)/deps/$(MODULE_NAME)/;
-	cp bin/index.js $(DEPLOY_INSTALL_PREFIX)/$(DEPLOY_RELEASE)/deps/$(MODULE_NAME)/bin/;
+	cp bin/util.js $(DEPLOY_INSTALL_PREFIX)/$(DEPLOY_RELEASE)/deps/$(MODULE_NAME)/bin/;
 	cp externs/index.js $(DEPLOY_INSTALL_PREFIX)/$(DEPLOY_RELEASE)/deps/$(MODULE_NAME)/externs/;
 
 
