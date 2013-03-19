@@ -1,3 +1,4 @@
+JS_BUILD_HOME ?= /usr/lib/js-build-tools
 
 
 #
@@ -9,19 +10,17 @@ JS_DEFAULT_ENV = browser
 
 MODULE_NAME = util
 
-include build/js-variables.mk
-
+include $(JS_BUILD_HOME)/js-variables.mk
 
 
 #
 #	Rules
 #
 
-all : js-export
+all : js-externs js-export
 
-test : js-test-lint js-test-compile
+check : js-test-lint js-test-compile
 
 clean : js-clean
 
-
-include build/js-rules.mk
+include $(JS_BUILD_HOME)/js-rules.mk

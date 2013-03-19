@@ -1,3 +1,193 @@
+ /**
+ * TUNA FRAMEWORK
+ *
+ * Copyright (c) 2012, Sergey Kononenko
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ * * Redistributions of source code must retain the above copyright
+ * notice, this list of conditions and the following disclaimer.
+ * * Redistributions in binary form must reproduce the above copyright
+ * notice, this list of conditions and the following disclaimer in the
+ * documentation and/or other materials provided with the distribution.
+ * * Names of contributors may be used to endorse or promote products
+ * derived from this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED. IN NO EVENT SHALL SERGEY KONONENKO BE LIABLE FOR ANY
+ * DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+
+/**
+ * @namespace
+ */
+var util = {};
+
+/**
+ * Версия библиотеки.
+ *
+ * @type {string}
+ */
+util.VERSION = '0.0.1';
+
+/**
+ * Является ли текущий браузер Internet Explorer'ом.
+ *
+ * @type {boolean}
+ */
+util.IS_IE = false;
+
+/**
+ * @namespace
+ */
+util.dom = {};
+
+/**
+ * Наследование типа.
+ *
+ * Передает прототип родительского класса дочернему классу без ссылки на
+ * него, сохраняя конструктор.
+ *
+ * @param {!Object} Class Класс который должен наследовать тип.
+ * @param {!Object} Parent Родительский класс.
+ */
+util.inherits = function(Class, Parent) {};
+
+/**
+ * Привязывание определенного контекста к функции или методу.
+ *
+ * @param {!Function} func Функция.
+ * @param {Object} context Контекст.
+ * @return {!Function} Привязанная к контексту функция.
+ */
+util.bind = function(func, context) {};
+
+/**
+ * Отложенное выполнение функции.
+ *
+ * @param {function()} callback Функция.
+ */
+util.async = function(callback) {};
+
+/**
+ * Ничего не выполняющая функция.
+ */
+util.nop = function() {};
+
+/**
+ * Клонирование объекта.
+ *
+ * @param {*} object Объект.
+ * @return {*} Копия объекта.
+ */
+util.clone = function(object) {};
+
+/**
+ * @param {!Object} base Базовый объект.
+ * @param {!Object} target Объект для наложения на базовый.
+ */
+util.merge = function(base, target) {};
+
+/**
+ * @param {Object} first Объект для сравнения.
+ * @param {Object} second Другой объект для сравнения.
+ * @return {boolean} Результат сравнения.
+ */
+util.areEqual = function(first, second) {};
+
+/**
+ * Преобразование объекта с индесами в массив.
+ *
+ * @param {!Object} list Объект похожий на массив.
+ * @return {!Array} Массив.
+ */
+util.toArray = function(list) {};
+
+/**
+ * Клонирование массива.
+ *
+ * @param {!Array} array Массив.
+ * @return {!Array} Копия массива.
+ */
+util.cloneArray = function(array) {};
+
+/**
+ * Поиск индекса объекта в массиве.
+ *
+ * @param {*} element Объект поиска.
+ * @param {!Array} array Массив.
+ * @return {number} Индекс найденного элемента.
+ */
+util.indexOf = function(element, array) {};
+
+/**
+ * @param {Object} object Объект кодирования.
+ * @return {string} Кодированный в строку объект.
+ */
+util.encodeJsonData = function(object) {};
+
+/**
+ * @param {string} data Закодированный объект.
+ * @return {*} Раскодированный объект.
+ */
+util.decodeJsonData = function(data) {};
+
+/**
+ * Кодирование объекта в x-www-form-urlencoded форму.
+ *
+ * @param {!Object} object Объект кодирования.
+ * @return {string} Перекодированный в строку объект.
+ */
+util.encodeFormData = function(object) {};
+
+/**
+ * Рекурсивное разбиение объекта н данные для кодирования в
+ * x-www-form-urlencoded.
+ *
+ * @param {!Object} object Объект кодирования.
+ * @param {!Array.<string>=} opt_path Путь к элементарной единице данных.
+ * @return {!Array.<string>} Массив элементарных данных составляющих объект.
+ */
+util.tokenizeUrlData = function(object, opt_path) {};
+
+/**
+ * @param {string} data Закодированный объект.
+ * @return {*} Раскодированный объект.
+ */
+util.decodeFormData = function(data) {};
+
+/**
+ * @param {string} token Имя элементарного узла данных.
+ * @return {!Array.<string>} Массив строк пути к узлу.
+ */
+util.parseUrlPathToken = function(token) {};
+
+/**
+ * @param {string} name Имя переменной.
+ * @param {string} value Значение.
+ * @param {number=} opt_time Время хранения.
+ */
+util.setCookie = function(name, value, opt_time) {};
+
+/**
+ * @param {string} name Имя переменной.
+ * @return {string} Значение переменной.
+ */
+util.getCookie = function(name) {};
+
+/**
+ * @param {string} name Имя переменной.
+ */
+util.removeCookie = function(name) {};
+
 /**
  * TUNA FRAMEWORK
  *
@@ -26,186 +216,16 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-
-
-/**
- * @namespace
- */
-var util = {};
-
-
-/**
- * Версия библиотеки.
- *
- * @const
- * @type {string}
- */
-util.VERSION = '';
-
-
-/**
- * Является ли текущий браузер Internet Explorer'ом.
- *
- * @const
- * @type {boolean}
- */
-util.IS_IE = false;
-
-
-/**
- * @namespace
- */
-util.dom = {};
-
-
-/**
- * Наследование типа.
- *
- * Передает прототип родительского класса дочернему классу без ссылки на
- * него, сохраняя конструктор.
- *
- * @param {!Object} Class Класс который должен наследовать тип.
- * @param {!Object} Parent Родительский класс.
- */
-util.inherits = function(Class, Parent) {};
-
-
-/**
- * Привязывание определенного контекста к функции или методу.
- *
- * @param {!function()} func Функция.
- * @param {Object} context Контекст.
- * @return {function()} Привязанная к контексту функция.
- */
-util.bind = function(func, context) {};
-
-
-/**
- * Отложенное выполнение функции.
- *
- * @param {function()} callback Функция.
- */
-util.async = function(callback) {};
-
-
-/**
- * Ничего не выполняющая функция.
- */
-util.nop = function() {};
-
-
-/**
- * Клонирование объекта.
- *
- * @param {*} object Объект.
- * @return {*} Копия объекта.
- */
-util.clone = function(object) {};
-
-
-/**
- * @param {!Object} base Базовый объект.
- * @param {!Object} target Объект для наложения на базовый.
- */
-util.merge = function(base, target) {};
-
-
-/**
- * @param {Object} first Объект для сравнения.
- * @param {Object} second Другой объект для сравнения.
- * @return {boolean} Результат сравнения.
- */
-util.areEqual = function(first, second) {};
-
-
-/**
- * Преобразование объекта с индесами в массив.
- *
- * @param {!Object} list Объект похожий на массив.
- * @return {!Array} Массив.
- */
-util.toArray = function(list) {};
-
-
-/**
- * Клонирование массива.
- *
- * @param {!Array} array Массив.
- * @return {!Array} Копия массива.
- */
-util.cloneArray = function(array) {};
-
-
-/**
- * Поиск индекса объекта в массиве.
- *
- * @param {*} element Объект поиска.
- * @param {!Array} array Массив.
- * @return {number} Индекс найденного элемента.
- */
-util.indexOf = function(element, array) {};
-
-
-/**
- * @param {Object} object Объект кодирования.
- * @return {string} Кодированный в строку объект.
- */
-util.encodeJsonData = function(object) {};
-
-
-/**
- * @param {string} data Закодированный объект.
- * @return {*} Раскодированный объект.
- */
-util.decodeJsonData = function(data) {};
-
-
-/**
- * Кодирование объекта в x-www-form-urlencoded форму.
- *
- * @param {!Object} object Объект кодирования.
- * @return {string} Перекодированный в строку объект.
- */
-util.encodeFormData = function(object) {};
-
-
-/**
- * @param {string} data Закодированный объект.
- * @return {*} Раскодированный объект.
- */
-util.decodeFormData = function(data) {};
-
-
-/**
- * Рекурсивное разбиение объекта н данные для кодирования в
- * x-www-form-urlencoded.
- *
- * @param {!Object} object Объект кодирования.
- * @param {!Array.<string>=} opt_path Путь к элементарной единице данных.
- * @return {!Array.<string>} Массив элементарных данных составляющих объект.
- */
-util.tokenizeUrlData = function(object, opt_path) {};
-
-
-/**
- * @param {string} token Имя элементарного узла данных.
- * @return {!Array.<string>} Массив строк пути к узлу.
- */
-util.parseUrlPathToken = function(token) {};
-
-
 /**
  * @constructor
  * @param {!Object} data Исходные данные.
  */
 util.SafeObject = function(data) {};
 
-
 /**
  * @return {!Object} Исходные данные.
  */
 util.SafeObject.prototype.getCore = function() {};
-
 
 /**
  * @param {...(string|number)} var_keys Путь к значению.
@@ -213,13 +233,11 @@ util.SafeObject.prototype.getCore = function() {};
  */
 util.SafeObject.prototype.get = function(var_keys) {};
 
-
 /**
  * @param {string|number|boolean|Object} value Данные.
  * @param {...(string|number)} var_keys Путь к значению.
  */
 util.SafeObject.prototype.set = function(value, var_keys) {};
-
 
 /**
  * @param {!Array.<(string|number)>} path Путь к значению.
@@ -227,14 +245,39 @@ util.SafeObject.prototype.set = function(value, var_keys) {};
  */
 util.SafeObject.prototype.getByPath = function(path) {};
 
-
 /**
  * @param {string|number|boolean|Object} value Данные.
  * @param {!Array.<(string|number)>} path Путь к значению.
  */
 util.SafeObject.prototype.setByPath = function(value, path) {};
 
-
+/**
+ * util FRAMEWORK
+ *
+ * Copyright (c) 2012, Sergey Kononenko
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
+ * * Redistributions of source code must retain the above copyright
+ * notice, this list of conditions and the following disclaimer.
+ * * Redistributions in binary form must reproduce the above copyright
+ * notice, this list of conditions and the following disclaimer in the
+ * documentation and/or other materials provided with the distribution.
+ * * Names of contributors may be used to endorse or promote products
+ * derived from this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED. IN NO EVENT SHALL SERGEY KONONENKO BE LIABLE FOR ANY
+ * DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ * (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ * LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+ * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
 
 /**
  * Установка движка поиска элементов с помощью CSS-селекторов.
@@ -253,7 +296,6 @@ util.SafeObject.prototype.setByPath = function(value, path) {};
  */
 util.dom.setSelectorEngine = function(engine) {};
 
-
 /**
  * Поиск элементов с помощью CSS-селектора в определенном контексте.
  *
@@ -264,7 +306,6 @@ util.dom.setSelectorEngine = function(engine) {};
  * @return {!Array.<!Node>} Массив найденных элементов.
  */
 util.dom.select = function(selector, opt_context) {};
-
 
 /**
  * Поиск единственного элемента соответсующего CSS-селектору.
@@ -277,7 +318,6 @@ util.dom.select = function(selector, opt_context) {};
  */
 util.dom.selectOne = function(selector, opt_context) {};
 
-
 /**
  * Фильтрация набора элементов с условием соответствия CSS-селектору.
  *
@@ -289,7 +329,6 @@ util.dom.selectOne = function(selector, opt_context) {};
  */
 util.dom.matches = function(selector, elements) {};
 
-
 /**
  * Проверка соответствия элемента CSS-селектору.
  *
@@ -299,7 +338,6 @@ util.dom.matches = function(selector, elements) {};
  * @return {boolean} Результат проверки.
  */
 util.dom.matchesSelector = function(element, selector) {};
-
 
 /**
  * Оповещение слушателей о событии DOM-элемента типа <code>type</code>.
@@ -312,7 +350,6 @@ util.dom.matchesSelector = function(element, selector) {};
  * @return {boolean} Успех результата оповещения.
  */
 util.dom.dispatchEvent = function(element, type) {};
-
 
 /**
  * Добавление обработчика события DOM-елемента.
@@ -328,7 +365,6 @@ util.dom.dispatchEvent = function(element, type) {};
  */
 util.dom.addEventListener = function(element, type, handler) {};
 
-
 /**
  * Удаление обработчика события DOM-элемента.
  *
@@ -338,7 +374,6 @@ util.dom.addEventListener = function(element, type, handler) {};
  * @param {!function(Event)} handler Функция-обработчик события.
  */
 util.dom.removeEventListener = function(element, type, handler) {};
-
 
 /**
  * Добавление единовременного обработчика события.
@@ -351,7 +386,6 @@ util.dom.removeEventListener = function(element, type, handler) {};
  */
 util.dom.addOneEventListener = function(element, type, handler) {};
 
-
 /**
  * Удаление единовременного обработчика события.
  *
@@ -362,7 +396,6 @@ util.dom.addOneEventListener = function(element, type, handler) {};
  * @param {!function(Event)} handler Функция-обработчик события.
  */
 util.dom.removeOneEventListener = function(element, type, handler) {};
-
 
 /**
  * Установка обработчика событий дочерних элементов выбранного DOM-элемента.
@@ -383,7 +416,6 @@ util.dom.removeOneEventListener = function(element, type, handler) {};
  */
 util.dom.addChildEventListener = function(element, selector, type, handler) {};
 
-
 /**
  * Удаление обработчика событий дочерних элементов выбранного DOM-элемента.
  *
@@ -396,7 +428,6 @@ util.dom.addChildEventListener = function(element, selector, type, handler) {};
  */
 util.dom.removeChildEventListener = function(element, selector, type, handler) {};
 
-
 /**
  * Кросс-браузерная обертка остановки дествия события по-умолчанию.
  *
@@ -404,14 +435,12 @@ util.dom.removeChildEventListener = function(element, selector, type, handler) {
  */
 util.dom.preventDefault = function(event) {};
 
-
 /**
  * Кросс-браузерная обертка остановки распространения события.
  *
  * @param {Event} event Объект DOM-события.
  */
 util.dom.stopPropagation = function(event) {};
-
 
 /**
  * Взятие ближайшего родителя DOM-элемента соответсвующего выбранному
@@ -426,7 +455,6 @@ util.dom.stopPropagation = function(event) {};
  */
 util.dom.getParentMatches = function(element, selector, opt_context) {};
 
-
 /**
  * Взятие ближайшего родителя DOM-элемента который имеет выбранный CSS-класс.
  *
@@ -438,7 +466,6 @@ util.dom.getParentMatches = function(element, selector, opt_context) {};
  */
 util.dom.getParentWithClass = function(element, className, opt_context) {};
 
-
 /**
  * Поиск элементов с указанным CSS-классом, в указанном контексте.
  *
@@ -448,7 +475,6 @@ util.dom.getParentWithClass = function(element, className, opt_context) {};
  */
 util.dom.getElementsByClassName = function(className, opt_element) {};
 
-
 /**
  * Проверка наличия CSS-класса элемента.
  *
@@ -457,7 +483,6 @@ util.dom.getElementsByClassName = function(className, opt_element) {};
  * @return {boolean} Результат проверки.
  */
 util.dom.hasClass = function(element, className) {};
-
 
 /**
  * Добавление CSS-класса элементу.
@@ -469,7 +494,6 @@ util.dom.hasClass = function(element, className) {};
  */
 util.dom.addClass = function(element, className) {};
 
-
 /**
  * Удаление CSS-класса у элемента.
  *
@@ -477,7 +501,6 @@ util.dom.addClass = function(element, className) {};
  * @param {string} className CSS-класс который нужно удалить.
  */
 util.dom.removeClass = function(element, className) {};
-
 
 /**
  * Установка наличия CSS-класса у DOM-элемента.
@@ -488,7 +511,6 @@ util.dom.removeClass = function(element, className) {};
  * @param {boolean} isExist Флаг наличия CSS-класса.
  */
 util.dom.setClassExist = function(element, className, isExist) {};
-
 
 /**
  * Извлечение данных DOM-элемента установленных в аттрибутах с префиксом
@@ -512,7 +534,6 @@ util.dom.setClassExist = function(element, className, isExist) {};
  */
 util.dom.getAttributesData = function(element, opt_prefix) {};
 
-
 /**
  * Создание экземпряра класса DocumentFragment cожержащий указанный HTML
  * контент.
@@ -523,22 +544,3 @@ util.dom.getAttributesData = function(element, opt_prefix) {};
 util.dom.createFragment = function(html) {};
 
 
-/**
- * @param {string} name Имя переменной.
- * @param {string} value Значение.
- * @param {number=} opt_time Время хранения.
- */
-util.setCookie = function(name, value, opt_time) {};
-
-
-/**
- * @param {string} name Имя переменной.
- * @return {string} Значение переменной.
- */
-util.getCookie = function(name) {};
-
-
-/**
- * @param {string} name Имя переменной.
- */
-util.removeCookie = function(name) {};
