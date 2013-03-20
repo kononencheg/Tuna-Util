@@ -43,7 +43,7 @@ util.VERSION = '0.0.1';
  *
  * @type {boolean}
  */
-util.IS_IE = false;
+util.IS_IE = !!eval("'\v' == 'v'");
 
 /**
  * @namespace
@@ -59,7 +59,6 @@ util.dom = {};
  * @param {!Object} Class Класс который должен наследовать тип.
  * @param {!Object} Parent Родительский класс.
  */
-util.inherits = function(Class, Parent) {};
 
 /**
  * Привязывание определенного контекста к функции или методу.
