@@ -59,6 +59,7 @@ util.dom = {};
  * @param {!Object} Class Класс который должен наследовать тип.
  * @param {!Object} Parent Родительский класс.
  */
+util.inherits = function(Class, Parent) {}; 
 
 /**
  * Привязывание определенного контекста к функции или методу.
