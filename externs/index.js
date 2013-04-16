@@ -43,7 +43,7 @@ util.VERSION = '0.0.1';
  *
  * @type {boolean}
  */
-util.IS_IE = false;
+util.IS_IE = !!eval("'\v' == 'v'");
 
 /**
  * @namespace
@@ -59,7 +59,6 @@ util.dom = {};
  * @param {!Object} Class Класс который должен наследовать тип.
  * @param {!Object} Parent Родительский класс.
  */
-util.inherits = function(Class, Parent) {}; 
 
 /**
  * Привязывание определенного контекста к функции или методу.
@@ -410,9 +409,9 @@ util.dom.removeOneEventListener = function(element, type, handler) {};
  * @see util.dom.getParentMatches
  * @param {!Node} element DOM-элемент, событие дочерних элементов которого
  *        нужно обрабатывать.
- * @param {?string} selector CSS-селектор дочерних элементов.
+ * @param {string} selector CSS-селектор дочерних элементов.
  * @param {string} type Тип обрабатываемого события.
- * @param {!function(Event)} handler Функция-обработчик события.
+ * @param {function(!Event, !Node)} handler Функция-обработчик события.
  */
 util.dom.addChildEventListener = function(element, selector, type, handler) {};
 
@@ -422,9 +421,9 @@ util.dom.addChildEventListener = function(element, selector, type, handler) {};
  * @see util.dom.addChildEventListener
  * @param {!Node} element DOM-элемент, обработчик события дочерних элементов
  *        которого нужно удалить.
- * @param {?string} selector CSS-селектор дочерних элементов.
+ * @param {string} selector CSS-селектор дочерних элементов.
  * @param {string} type Тип обрабатываемого события.
- * @param {!function(Event)} handler Функция-обработчик события.
+ * @param {function(!Event, !Node)} handler Функция-обработчик события.
  */
 util.dom.removeChildEventListener = function(element, selector, type, handler) {};
 
@@ -441,6 +440,27 @@ util.dom.preventDefault = function(event) {};
  * @param {Event} event Объект DOM-события.
  */
 util.dom.stopPropagation = function(event) {};
+
+/**
+ * @param {!Event} event Объект DOM-события.
+ * @return {Node} Узел с которым произошло событие.
+ */
+util.dom.getEventTarget = function(event) {};
+
+/**
+ * @param {!Node} element DOM-элемент родителя которого нужно найти.
+ * @param {!Node} parent Родителя которого необходимо найти.
+ * @param {Node=} opt_context DOM-элемент ограничивающий поиск родителя.
+ * @return {boolean} Есть ли такой родитель.
+ */
+util.dom.hasParent = function(element, parent, opt_context) {};
+
+/**
+ * @param {!Node} element DOM-элемент родителя которого нужно найти.
+ * @param {Node=} opt_context DOM-элемент ограничивающий поиск родителя.
+ * @return {!Array.<!Node>} Есть ли такой родитель.
+ */
+util.dom.getParents = function(element, opt_context) {};
 
 /**
  * Взятие ближайшего родителя DOM-элемента соответсвующего выбранному
