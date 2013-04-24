@@ -170,6 +170,20 @@ util.decodeFormData = function(data) {};
 util.parseUrlPathToken = function(token) {};
 
 /**
+ * @param {string} string
+ * @param {boolean=} opt_forUrl
+ * @return {string}
+ */
+util.encodeBase64 = function(string, opt_forUrl) {};
+
+/**
+ * @param {string} string
+ * @param {boolean=} opt_forUrl
+ * @return {string}
+ */
+util.decodeBase64 = function(string, opt_forUrl) {};
+
+/**
  * @param {string} name Имя переменной.
  * @param {string} value Значение.
  * @param {number=} opt_time Время хранения.
