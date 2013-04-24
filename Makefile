@@ -8,7 +8,7 @@ JS_ROOT_DIR = ./
 JS_DEFAULT_ENV = browser
 JS_DEPS_DIRS =
 
-MODULE_NAME = util
+MODULE_NAME = protocols
 
 include $(JS_BUILD_HOME)/js-variables.mk
 
