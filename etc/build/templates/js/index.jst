@@ -67,3 +67,6 @@ if (typeof JSON.stringify !== 'function') {
 if (typeof JSON.parse !== 'function') {
   throw Error('"JSON.parse()" method must exists.');
 }
+
+
+%%make -s index.js-compile%%
